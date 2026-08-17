@@ -1,0 +1,170 @@
+<svg width="1400" height="360" viewBox="0 0 1400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="360">
+      <stop stop-color="#070B12"/>
+      <stop offset="0.5" stop-color="#0A0F1A"/>
+      <stop offset="1" stop-color="#06090F"/>
+    </linearGradient>
+
+    <linearGradient id="aurora1" x1="250" y1="40" x2="1150" y2="300">
+      <stop stop-color="#22D3EE" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <linearGradient id="aurora2" x1="1150" y1="40" x2="250" y2="300">
+      <stop stop-color="#06B6D4" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#8B5CF6" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#EC4899" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(700 170) rotate(90) scale(150 520)">
+      <stop stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="0.45" stop-color="#22D3EE" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurXL" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+
+    <filter id="blurL" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#1B2332" stroke-width="1" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="360" fill="url(#bg)"/>
+  <rect width="1400" height="360" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- ambient glow -->
+  <ellipse cx="700" cy="175" rx="560" ry="145" fill="url(#glow)" filter="url(#blurXL)">
+    <animate attributeName="rx" values="520;590;520" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="125;160;125" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- wide animated aurora field -->
+  <path
+    d="M140 205
+       C250 85 390 60 515 125
+       C625 182 700 55 840 85
+       C960 110 1010 210 1145 170
+       C1240 142 1290 105 1350 145
+       L1350 255
+       C1230 300 1100 285 1000 245
+       C875 195 770 305 625 275
+       C500 248 420 205 295 255
+       C215 285 170 258 140 235 Z"
+    fill="url(#aurora1)"
+    opacity="0.34"
+    filter="url(#blurL)">
+    
+    <animate
+      attributeName="d"
+      dur="10s"
+      repeatCount="indefinite"
+      values="
+      M140 205 C250 85 390 60 515 125 C625 182 700 55 840 85 C960 110 1010 210 1145 170 C1240 142 1290 105 1350 145 L1350 255 C1230 300 1100 285 1000 245 C875 195 770 305 625 275 C500 248 420 205 295 255 C215 285 170 258 140 235 Z;
+      M105 185 C235 120 365 70 500 105 C625 135 715 85 835 110 C960 138 1020 185 1135 155 C1230 130 1300 130 1360 180 L1360 245 C1245 285 1120 300 1005 265 C875 228 775 275 650 260 C520 245 405 195 285 225 C190 250 135 235 105 215 Z;
+      M140 205 C250 85 390 60 515 125 C625 182 700 55 840 85 C960 110 1010 210 1145 170 C1240 142 1290 105 1350 145 L1350 255 C1230 300 1100 285 1000 245 C875 195 770 305 625 275 C500 248 420 205 295 255 C215 285 170 258 140 235 Z"/>
+  </path>
+
+  <path
+    d="M90 150
+       C240 105 355 155 475 110
+       C610 62 715 125 840 120
+       C965 115 1050 80 1180 120
+       C1270 150 1310 190 1370 180"
+    stroke="url(#aurora2)"
+    stroke-width="26"
+    stroke-linecap="round"
+    opacity="0.28"
+    filter="url(#blurL)">
+    
+    <animate
+      attributeName="d"
+      dur="7s"
+      repeatCount="indefinite"
+      values="
+      M90 150 C240 105 355 155 475 110 C610 62 715 125 840 120 C965 115 1050 80 1180 120 C1270 150 1310 190 1370 180;
+      M60 180 C210 145 360 95 495 135 C625 175 720 85 850 95 C980 105 1070 150 1190 130 C1285 115 1335 140 1390 165;
+      M90 150 C240 105 355 155 475 110 C610 62 715 125 840 120 C965 115 1050 80 1180 120 C1270 150 1310 190 1370 180"/>
+  </path>
+
+  <!-- subtle orbit lines -->
+  <ellipse cx="700" cy="175" rx="430" ry="92"
+    stroke="#22D3EE" stroke-opacity="0.16" stroke-width="1.5"
+    transform="rotate(-7 700 175)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="-7 700 175"
+      to="353 700 175"
+      dur="28s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+  <ellipse cx="700" cy="175" rx="505" ry="120"
+    stroke="#8B5CF6" stroke-opacity="0.12" stroke-width="1"
+    transform="rotate(9 700 175)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="9 700 175"
+      to="-351 700 175"
+      dur="36s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- title -->
+  <text
+    x="700"
+    y="150"
+    text-anchor="middle"
+    fill="#F8FAFC"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="66"
+    font-weight="800"
+    letter-spacing="-1.5"
+    filter="url(#textGlow)">
+    MURAT CAN YÖRÜSÜN
+  </text>
+
+  <text
+    x="700"
+    y="205"
+    text-anchor="middle"
+    fill="#CBD5E1"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="600">
+    Senior Frontend Engineer • Creative Product Engineer
+  </text>
+
+  <!-- micro detail -->
+  <text
+    x="700"
+    y="265"
+    text-anchor="middle"
+    fill="#67E8F9"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    font-weight="700"
+    letter-spacing="4">
+    FRONTEND ARCHITECTURE • CREATIVE TECHNOLOGY • WEBGL • AI
+  </text>
+
+</svg>
