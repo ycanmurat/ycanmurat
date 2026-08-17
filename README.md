@@ -98,11 +98,12 @@ Product Engineering
 <img width="78%" src="https://streak-stats.demolab.com?user=ycanmurat&theme=tokyonight&hide_border=true&ring=8B5CF6&fire=F59E0B&currStreakLabel=22D3EE" />
 
 <br/><br/>
-
-<img width="92%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ycanmurat&theme=tokyonight" />
-
+<br/>
+<div align="center">
+  <img src="./assets/profile-card.svg" width="100%" alt="Murat Can Yörüsün — Creative Product Engineer" />
 </div>
-
+</div>
+<br/>
 ---
 
 <div align="center">
