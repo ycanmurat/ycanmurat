@@ -188,13 +188,44 @@ Interested in finding places where it fundamentally changes **how a product work
 
 <div align="center">
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=ycanmurat&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" />
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=ycanmurat&show_icons=true&hide_border=true&theme=dark&include_all_commits=true"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=ycanmurat&show_icons=true&hide_border=true&include_all_commits=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img
+    height="170"
+    src="https://github-readme-stats.vercel.app/api?username=ycanmurat&show_icons=true&hide_border=true"
+    alt="Murat's GitHub stats"
+  />
+</picture>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ycanmurat&layout=compact&hide_border=true&theme=transparent&langs_count=8" />
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ycanmurat&layout=compact&hide_border=true&theme=dark&langs_count=8"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ycanmurat&layout=compact&hide_border=true&langs_count=8"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img
+    height="170"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=ycanmurat&layout=compact&hide_border=true&langs_count=8"
+    alt="Most used languages"
+  />
+</picture>
 
-<br/>
+<br/><br/>
 
-<img width="80%" src="https://streak-stats.demolab.com?user=ycanmurat&theme=transparent&hide_border=true" />
+<img
+  src="https://streak-stats.demolab.com/?user=ycanmurat&hide_border=true"
+  alt="GitHub streak"
+/>
 
 </div>
 
@@ -204,30 +235,41 @@ Interested in finding places where it fundamentally changes **how a product work
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/ycanmurat/ycanmurat/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only" />
-
-<img src="https://raw.githubusercontent.com/ycanmurat/ycanmurat/output/github-contribution-grid-snake.svg#gh-light-mode-only" />
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/ycanmurat/ycanmurat/output/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+    srcset="https://raw.githubusercontent.com/ycanmurat/ycanmurat/output/github-contribution-grid-snake.svg"
+  />
+  <img
+    src="https://raw.githubusercontent.com/ycanmurat/ycanmurat/output/github-contribution-grid-snake.svg"
+    alt="GitHub contribution snake"
+  />
+</picture>
 
 </div>
 
 ---
 
-# `> philosophy.txt`
+<div align="center">
 
-> The best interfaces don't make people think about the interface.
->
-> They respond, move, communicate and disappear into the experience.
+## `> philosophy.txt`
 
-I care about the details between **“it works”** and **“this feels right.”**
+### Useful software is expected.  
+### Memorable software is designed.
 
-Architecture matters.  
-Performance matters.  
-Accessibility matters.  
-Motion matters.  
-Typography matters.  
-Milliseconds matter.
+I care about the space between **“it works”** and **“this feels right.”**
 
-And sometimes a completely unnecessary particle system matters too.
+`Architecture` · `Performance` · `Accessibility` · `Motion` · `Detail`
+
+<br/>
+
+**Build things people remember.**
+
+</div>
 
 ---
 
