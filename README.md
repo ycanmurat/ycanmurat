@@ -22,7 +22,7 @@
 const murat = {
   title: "Senior Frontend Engineer",
   mode: "Creative Product Engineer",
-  experience: "10+ years",
+  experience: "14 years",
 
   domains: [
     "Frontend Architecture",
