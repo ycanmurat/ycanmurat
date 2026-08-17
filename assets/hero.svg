@@ -1,170 +1,311 @@
-<svg width="1400" height="360" viewBox="0 0 1400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1400" height="380" viewBox="0 0 1400 380" fill="none" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="360">
-      <stop stop-color="#070B12"/>
-      <stop offset="0.5" stop-color="#0A0F1A"/>
-      <stop offset="1" stop-color="#06090F"/>
+    <!-- BACKGROUND -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="380">
+      <stop stop-color="#030712"/>
+      <stop offset="0.48" stop-color="#080B16"/>
+      <stop offset="1" stop-color="#03060D"/>
     </linearGradient>
 
-    <linearGradient id="aurora1" x1="250" y1="40" x2="1150" y2="300">
-      <stop stop-color="#22D3EE" stop-opacity="0.9"/>
-      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.75"/>
+    <!-- AURORA -->
+    <linearGradient id="auroraA" x1="150" y1="80" x2="1250" y2="280">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.35" stop-color="#2563EB"/>
+      <stop offset="0.68" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#EC4899"/>
     </linearGradient>
 
-    <linearGradient id="aurora2" x1="1150" y1="40" x2="250" y2="300">
-      <stop stop-color="#06B6D4" stop-opacity="0.45"/>
-      <stop offset="0.5" stop-color="#8B5CF6" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#EC4899" stop-opacity="0.35"/>
+    <linearGradient id="auroraB" x1="1200" y1="50" x2="200" y2="320">
+      <stop stop-color="#06B6D4"/>
+      <stop offset="0.45" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A855F7"/>
     </linearGradient>
 
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-      gradientTransform="translate(700 170) rotate(90) scale(150 520)">
-      <stop stop-color="#8B5CF6" stop-opacity="0.35"/>
-      <stop offset="0.45" stop-color="#22D3EE" stop-opacity="0.18"/>
+    <linearGradient id="auroraC" x1="100" y1="300" x2="1300" y2="80">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+
+    <!-- GLOWS -->
+    <radialGradient id="coreGlow">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.34"/>
+      <stop offset="0.42" stop-color="#22D3EE" stop-opacity="0.16"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="blurXL" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="45"/>
+    <radialGradient id="cyanGlow">
+      <stop stop-color="#22D3EE" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="violetGlow">
+      <stop stop-color="#8B5CF6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- FILTERS -->
+    <filter id="blurHuge" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
     </filter>
 
-    <filter id="blurL" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="22"/>
+    <filter id="blurMedium" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
     </filter>
 
-    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="blurSmall" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="titleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="
+          0 0 0 0 0.13
+          0 0 0 0 0.83
+          0 0 0 0 0.93
+          0 0 0 .30 0"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <path d="M36 0H0V36" stroke="#1B2332" stroke-width="1" opacity="0.35"/>
+    <!-- GRID -->
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#253047" stroke-width="1" opacity="0.22"/>
+    </pattern>
+
+    <!-- MICRO DOTS -->
+    <pattern id="dots" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#67E8F9" opacity="0.15"/>
     </pattern>
   </defs>
 
-  <rect width="1400" height="360" fill="url(#bg)"/>
-  <rect width="1400" height="360" fill="url(#grid)" opacity="0.5"/>
 
-  <!-- ambient glow -->
-  <ellipse cx="700" cy="175" rx="560" ry="145" fill="url(#glow)" filter="url(#blurXL)">
-    <animate attributeName="rx" values="520;590;520" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="125;160;125" dur="9s" repeatCount="indefinite"/>
+  <!-- BASE -->
+  <rect width="1400" height="380" fill="url(#bg)"/>
+  <rect width="1400" height="380" fill="url(#grid)"/>
+  <rect width="1400" height="380" fill="url(#dots)"/>
+
+
+  <!-- DEEP AMBIENT LIGHT -->
+  <ellipse cx="700" cy="185" rx="650" ry="170"
+    fill="url(#coreGlow)"
+    filter="url(#blurHuge)">
+    <animate attributeName="rx" values="610;680;610" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="145;190;145" dur="9s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- wide animated aurora field -->
+  <circle cx="260" cy="120" r="180"
+    fill="url(#cyanGlow)"
+    filter="url(#blurHuge)">
+    <animate attributeName="cx" values="240;330;240" dur="12s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1140" cy="245" r="200"
+    fill="url(#violetGlow)"
+    filter="url(#blurHuge)">
+    <animate attributeName="cx" values="1160;1060;1160" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- AURORA RIBBON 01 -->
   <path
-    d="M140 205
-       C250 85 390 60 515 125
-       C625 182 700 55 840 85
-       C960 110 1010 210 1145 170
-       C1240 142 1290 105 1350 145
-       L1350 255
-       C1230 300 1100 285 1000 245
-       C875 195 770 305 625 275
-       C500 248 420 205 295 255
-       C215 285 170 258 140 235 Z"
-    fill="url(#aurora1)"
-    opacity="0.34"
-    filter="url(#blurL)">
-    
+    d="M-80 230
+       C120 100 290 110 450 175
+       C580 228 655 55 820 92
+       C970 125 1030 240 1195 180
+       C1300 142 1390 90 1500 150
+       L1500 270
+       C1330 330 1185 300 1040 252
+       C900 205 815 318 655 285
+       C500 252 390 225 250 280
+       C100 335 -20 295 -80 270Z"
+    fill="url(#auroraA)"
+    opacity="0.24"
+    filter="url(#blurMedium)">
+
     <animate
       attributeName="d"
       dur="10s"
       repeatCount="indefinite"
       values="
-      M140 205 C250 85 390 60 515 125 C625 182 700 55 840 85 C960 110 1010 210 1145 170 C1240 142 1290 105 1350 145 L1350 255 C1230 300 1100 285 1000 245 C875 195 770 305 625 275 C500 248 420 205 295 255 C215 285 170 258 140 235 Z;
-      M105 185 C235 120 365 70 500 105 C625 135 715 85 835 110 C960 138 1020 185 1135 155 C1230 130 1300 130 1360 180 L1360 245 C1245 285 1120 300 1005 265 C875 228 775 275 650 260 C520 245 405 195 285 225 C190 250 135 235 105 215 Z;
-      M140 205 C250 85 390 60 515 125 C625 182 700 55 840 85 C960 110 1010 210 1145 170 C1240 142 1290 105 1350 145 L1350 255 C1230 300 1100 285 1000 245 C875 195 770 305 625 275 C500 248 420 205 295 255 C215 285 170 258 140 235 Z"/>
+      M-80 230 C120 100 290 110 450 175 C580 228 655 55 820 92 C970 125 1030 240 1195 180 C1300 142 1390 90 1500 150 L1500 270 C1330 330 1185 300 1040 252 C900 205 815 318 655 285 C500 252 390 225 250 280 C100 335 -20 295 -80 270Z;
+
+      M-80 195 C110 125 285 65 455 135 C605 198 695 95 835 110 C995 128 1070 205 1210 165 C1335 130 1430 145 1500 200 L1500 285 C1330 320 1190 322 1045 278 C900 235 805 285 665 270 C510 250 395 185 240 245 C100 295 -20 270 -80 245Z;
+
+      M-80 230 C120 100 290 110 450 175 C580 228 655 55 820 92 C970 125 1030 240 1195 180 C1300 142 1390 90 1500 150 L1500 270 C1330 330 1185 300 1040 252 C900 205 815 318 655 285 C500 252 390 225 250 280 C100 335 -20 295 -80 270Z"/>
   </path>
 
+
+  <!-- AURORA RIBBON 02 -->
   <path
-    d="M90 150
-       C240 105 355 155 475 110
-       C610 62 715 125 840 120
-       C965 115 1050 80 1180 120
-       C1270 150 1310 190 1370 180"
-    stroke="url(#aurora2)"
-    stroke-width="26"
+    d="M-50 130
+       C150 195 310 60 490 120
+       C655 175 725 165 860 115
+       C1010 60 1130 150 1260 125
+       C1370 105 1445 125 1500 165"
+    stroke="url(#auroraB)"
+    stroke-width="42"
     stroke-linecap="round"
-    opacity="0.28"
-    filter="url(#blurL)">
-    
+    opacity="0.18"
+    filter="url(#blurMedium)">
+
     <animate
       attributeName="d"
-      dur="7s"
+      dur="8s"
       repeatCount="indefinite"
       values="
-      M90 150 C240 105 355 155 475 110 C610 62 715 125 840 120 C965 115 1050 80 1180 120 C1270 150 1310 190 1370 180;
-      M60 180 C210 145 360 95 495 135 C625 175 720 85 850 95 C980 105 1070 150 1190 130 C1285 115 1335 140 1390 165;
-      M90 150 C240 105 355 155 475 110 C610 62 715 125 840 120 C965 115 1050 80 1180 120 C1270 150 1310 190 1370 180"/>
+      M-50 130 C150 195 310 60 490 120 C655 175 725 165 860 115 C1010 60 1130 150 1260 125 C1370 105 1445 125 1500 165;
+      M-50 165 C130 105 310 170 480 105 C635 45 730 115 865 145 C1015 180 1135 85 1265 110 C1390 135 1455 165 1500 140;
+      M-50 130 C150 195 310 60 490 120 C655 175 725 165 860 115 C1010 60 1130 150 1260 125 C1370 105 1445 125 1500 165"/>
   </path>
 
-  <!-- subtle orbit lines -->
-  <ellipse cx="700" cy="175" rx="430" ry="92"
-    stroke="#22D3EE" stroke-opacity="0.16" stroke-width="1.5"
-    transform="rotate(-7 700 175)">
+
+  <!-- ENERGY THREAD -->
+  <path
+    d="M90 230
+       C220 195 320 220 420 185
+       C545 142 630 200 730 170
+       C850 135 945 200 1050 165
+       C1150 130 1240 145 1310 120"
+    stroke="url(#auroraC)"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.65"
+    filter="url(#blurSmall)"
+    stroke-dasharray="12 18">
+
+    <animate
+      attributeName="stroke-dashoffset"
+      from="0"
+      to="-300"
+      dur="7s"
+      repeatCount="indefinite"/>
+  </path>
+
+
+  <!-- ORBITAL SYSTEM -->
+  <ellipse
+    cx="700" cy="180"
+    rx="505" ry="104"
+    stroke="#22D3EE"
+    stroke-width="1"
+    stroke-opacity="0.18"
+    transform="rotate(-8 700 180)">
+
     <animateTransform
       attributeName="transform"
       type="rotate"
-      from="-7 700 175"
-      to="353 700 175"
-      dur="28s"
+      from="-8 700 180"
+      to="352 700 180"
+      dur="32s"
       repeatCount="indefinite"/>
   </ellipse>
 
-  <ellipse cx="700" cy="175" rx="505" ry="120"
-    stroke="#8B5CF6" stroke-opacity="0.12" stroke-width="1"
-    transform="rotate(9 700 175)">
+  <ellipse
+    cx="700" cy="180"
+    rx="585" ry="132"
+    stroke="#8B5CF6"
+    stroke-width="1"
+    stroke-opacity="0.14"
+    transform="rotate(8 700 180)">
+
     <animateTransform
       attributeName="transform"
       type="rotate"
-      from="9 700 175"
-      to="-351 700 175"
-      dur="36s"
+      from="8 700 180"
+      to="-352 700 180"
+      dur="44s"
       repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- title -->
+
+  <!-- ORBIT NODES -->
+  <circle cx="1190" cy="145" r="4" fill="#22D3EE">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="280" cy="225" r="3" fill="#A78BFA">
+    <animate attributeName="opacity" values="1;0.25;1" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1030" cy="255" r="3" fill="#F59E0B">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- TITLE -->
   <text
     x="700"
-    y="150"
+    y="159"
     text-anchor="middle"
     fill="#F8FAFC"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="66"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+    font-size="67"
     font-weight="800"
-    letter-spacing="-1.5"
-    filter="url(#textGlow)">
+    letter-spacing="-2"
+    filter="url(#titleGlow)">
     MURAT CAN YÖRÜSÜN
   </text>
 
+
+  <!-- SUBTITLE -->
   <text
     x="700"
-    y="205"
+    y="215"
     text-anchor="middle"
     fill="#CBD5E1"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="26"
-    font-weight="600">
-    Senior Frontend Engineer • Creative Product Engineer
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+    font-size="25"
+    font-weight="500"
+    letter-spacing="0.4">
+    Senior Frontend Engineer  •  Creative Product Engineer
   </text>
 
-  <!-- micro detail -->
-  <text
-    x="700"
-    y="265"
-    text-anchor="middle"
-    fill="#67E8F9"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="14"
-    font-weight="700"
-    letter-spacing="4">
-    FRONTEND ARCHITECTURE • CREATIVE TECHNOLOGY • WEBGL • AI
-  </text>
+
+  <!-- SMALL SIGNAL -->
+  <g opacity="0.9">
+
+    <line x1="455" y1="257" x2="585" y2="257"
+      stroke="#22D3EE"
+      stroke-opacity="0.45"/>
+
+    <circle cx="598" cy="257" r="3" fill="#22D3EE">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <text
+      x="700"
+      y="262"
+      text-anchor="middle"
+      fill="#67E8F9"
+      font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+      font-size="12"
+      font-weight="600"
+      letter-spacing="3.3">
+      FRONTEND  ·  CREATIVE TECHNOLOGY  ·  WEBGL  ·  AI
+    </text>
+
+    <circle cx="802" cy="257" r="3" fill="#8B5CF6">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <line x1="815" y1="257" x2="945" y2="257"
+      stroke="#8B5CF6"
+      stroke-opacity="0.45"/>
+
+  </g>
+
+
+  <!-- TOP / BOTTOM DETAIL -->
+  <rect x="0" y="0" width="1400" height="2" fill="url(#auroraA)" opacity="0.7"/>
+
+  <rect x="0" y="378" width="1400" height="2" fill="url(#auroraB)" opacity="0.35"/>
 
 </svg>
