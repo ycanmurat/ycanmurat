@@ -1,10 +1,10 @@
 <div align="center">
 
-<div align="center">
+<img src="./assets/hero.svg" width="100%" alt="Murat Can Yörüsün — Senior Frontend Engineer & Creative Product Engineer" />
 
-  <img src="./assets/hero.svg" width="100%" alt="Murat Can Yörüsün — Senior Frontend Engineer and Creative Product Engineer" />
+<br/>
 
-</div>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2400&pause=800&color=67E8F9&center=true&vCenter=true&width=900&lines=React+%E2%80%A2+TypeScript+%E2%80%A2+Next.js+%E2%80%A2+Three.js+%E2%80%A2+WebGL;Frontend+Architecture+%C3%97+Creative+Technology;Interactive+products+%E2%80%A2+Realtime+systems+%E2%80%A2+AI-native+interfaces)](https://git.io/typing-svg)
 
 <br/>
 
