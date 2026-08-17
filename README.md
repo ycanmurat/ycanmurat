@@ -1,8 +1,10 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=250&text=MURAT%20CAN%20YÖRÜSÜN&fontSize=48&fontAlignY=40&fontColor=F8FAFC&desc=Senior%20Frontend%20Engineer%20%E2%80%A2%20Creative%20Product%20Engineer&descAlignY=62&descSize=20&animation=fadeIn&color=0:050816,35:111827,70:312e81,100:06B6D4" />
+<div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2400&pause=800&color=67E8F9&center=true&vCenter=true&width=900&lines=React+%E2%80%A2+TypeScript+%E2%80%A2+Next.js+%E2%80%A2+Three.js+%E2%80%A2+WebGL;Frontend+Architecture+%C3%97+Creative+Technology;Interactive+products+%E2%80%A2+Realtime+systems+%E2%80%A2+AI-native+interfaces)](https://git.io/typing-svg)
+  <img src="./assets/hero.svg" width="100%" alt="Murat Can Yörüsün — Senior Frontend Engineer and Creative Product Engineer" />
+
+</div>
 
 <br/>
 
